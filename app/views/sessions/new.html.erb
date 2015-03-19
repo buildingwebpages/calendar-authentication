@@ -1,0 +1,19 @@
+<h1> Log In </h1>
+
+<%= form_for(:session, url: login_path) do |f| %>
+  <div class="form-group">
+    <div class="row">
+      <div class='col-md-4'>
+        <%= f.label :email %>
+        <%= f.email_field :email, class: "form-control" %>
+        
+        <%= f.label :password %>
+        <%= f.password_field :password, class: "form-control" %><br>
+        
+        <%= f.submit "Log In", class: 'btn' %>
+      </div>
+    </div>
+  </div>
+    
+<% end %>
+   
