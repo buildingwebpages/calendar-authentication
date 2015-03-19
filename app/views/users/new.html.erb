@@ -1,22 +1,22 @@
 <h1> Sign up! </h1>
 
-<%= form_for (@user) do |f| %>
+<%= form_for (@user), :id => 'user_form' do |f| %>
     
     <div class="form-group">
-        <div class="row">
-            <div class='col-md-4'>
-                <%= f.label :name %>
-                <%= f.text_field :name, class: "form-control" %>
-                
-                <%= f.label :email %>
-                <%= f.email_field :email, class: "form-control" %>
-                
-                <%= f.label :password %>
-                <%= f.password_field :password, class: "form-control" %><br>
-                
-                <%= f.submit "Sign Up", class: 'btn' %>
-            </div>
+      <div class="row">
+        <div class='col-md-4'>
+          <%= f.label :name %><p class="error name-error"></p>
+          <%= f.text_field :name, class: "form-control" %>
+          
+          <%= f.label :email %><p class="error email-error"></p>
+          <%= f.email_field :email, class: "form-control" %>
+          
+          <%= f.label :password %><p class="error password-error"></p>
+          <%= f.password_field :password, class: "form-control" %><br>
+          
+          <%= f.submit "Sign Up", class: 'btn' %>
         </div>
+      </div>
     </div>
     
 <% end %>
